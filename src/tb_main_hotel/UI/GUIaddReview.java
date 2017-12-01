@@ -5,6 +5,8 @@
  */
 package tb_main_hotel.UI;
 
+import javax.swing.JButton;
+
 /**
  *
  * @author Andaresta
@@ -31,13 +33,13 @@ public class GUIaddReview extends javax.swing.JFrame {
         jPanel1 = new javax.swing.JPanel();
         titleReview = new javax.swing.JLabel();
         titleRating = new javax.swing.JLabel();
-        txRating = new javax.swing.JTextField();
         titleNamaHotel = new javax.swing.JLabel();
         txNamaHotel = new javax.swing.JTextField();
         titleUlasan = new javax.swing.JLabel();
         jScrollPane1 = new javax.swing.JScrollPane();
         txUlasan = new javax.swing.JTextArea();
         btDoReview = new javax.swing.JButton();
+        comboRating = new javax.swing.JComboBox<>();
 
         javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
         jPanel2.setLayout(jPanel2Layout);
@@ -70,6 +72,8 @@ public class GUIaddReview extends javax.swing.JFrame {
 
         btDoReview.setText("Submit");
 
+        comboRating.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "1", "2", "3", "4", "5", "6", "7", "8", "9", "10" }));
+
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
         jPanel1Layout.setHorizontalGroup(
@@ -83,13 +87,14 @@ public class GUIaddReview extends javax.swing.JFrame {
                             .addComponent(titleNamaHotel)
                             .addComponent(titleUlasan))
                         .addGap(38, 38, 38)
-                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                            .addComponent(txRating, javax.swing.GroupLayout.PREFERRED_SIZE, 65, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 300, Short.MAX_VALUE)
-                            .addComponent(txNamaHotel))
-                        .addContainerGap(70, Short.MAX_VALUE))
+                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                                .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 300, Short.MAX_VALUE)
+                                .addComponent(txNamaHotel))
+                            .addComponent(comboRating, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
-                        .addGap(0, 0, Short.MAX_VALUE)
+                        .addGap(0, 190, Short.MAX_VALUE)
                         .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
                                 .addComponent(btDoReview)
@@ -106,7 +111,7 @@ public class GUIaddReview extends javax.swing.JFrame {
                 .addGap(18, 18, 18)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(titleRating)
-                    .addComponent(txRating, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(comboRating, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(titleNamaHotel)
@@ -143,41 +148,21 @@ public class GUIaddReview extends javax.swing.JFrame {
     /**
      * @param args the command line arguments
      */
-    public static void main(String args[]) {
-        /* Set the Nimbus look and feel */
-        //<editor-fold defaultstate="collapsed" desc=" Look and feel setting code (optional) ">
-        /* If Nimbus (introduced in Java SE 6) is not available, stay with the default look and feel.
-         * For details see http://download.oracle.com/javase/tutorial/uiswing/lookandfeel/plaf.html 
-         */
-        try {
-            for (javax.swing.UIManager.LookAndFeelInfo info : javax.swing.UIManager.getInstalledLookAndFeels()) {
-                if ("Nimbus".equals(info.getName())) {
-                    javax.swing.UIManager.setLookAndFeel(info.getClassName());
-                    break;
-                }
-            }
-        } catch (ClassNotFoundException ex) {
-            java.util.logging.Logger.getLogger(GUIaddReview.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        } catch (InstantiationException ex) {
-            java.util.logging.Logger.getLogger(GUIaddReview.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        } catch (IllegalAccessException ex) {
-            java.util.logging.Logger.getLogger(GUIaddReview.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-            java.util.logging.Logger.getLogger(GUIaddReview.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        }
-        //</editor-fold>
-        //</editor-fold>
-
-        /* Create and display the form */
-        java.awt.EventQueue.invokeLater(new Runnable() {
-            public void run() {
-                new GUIaddReview().setVisible(true);
-            }
-        });
+    public int getRating(){
+        return comboRating.getSelectedIndex();
     }
-
+    
+    public String getUlasan(){
+        return txUlasan.getText();
+    }
+    
+     public JButton getBtnAdd() {
+        return btDoReview;
+    }
+     
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton btDoReview;
+    private javax.swing.JComboBox<String> comboRating;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel2;
     private javax.swing.JScrollPane jScrollPane1;
@@ -186,7 +171,6 @@ public class GUIaddReview extends javax.swing.JFrame {
     private javax.swing.JLabel titleReview;
     private javax.swing.JLabel titleUlasan;
     private javax.swing.JTextField txNamaHotel;
-    private javax.swing.JTextField txRating;
     private javax.swing.JTextArea txUlasan;
     // End of variables declaration//GEN-END:variables
 }

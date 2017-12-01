@@ -36,6 +36,8 @@ public class GUIdoReservasi extends javax.swing.JFrame {
         titleTanggal = new javax.swing.JLabel();
         titileJumOrang = new javax.swing.JLabel();
         titleHotel = new javax.swing.JLabel();
+        btDoResv = new javax.swing.JButton();
+        comboJumOrang = new javax.swing.JComboBox<>();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -48,6 +50,11 @@ public class GUIdoReservasi extends javax.swing.JFrame {
 
         titleHotel.setText("Hotel");
 
+        btDoResv.setText("Submit");
+
+        comboJumOrang.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "1", "2", "3", "4", "5", "6", "7", "8", "9", "10" }));
+        comboJumOrang.setToolTipText("");
+
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
         jPanel1Layout.setHorizontalGroup(
@@ -58,9 +65,19 @@ public class GUIdoReservasi extends javax.swing.JFrame {
                     .addComponent(titleTanggal)
                     .addComponent(titileJumOrang)
                     .addComponent(titleHotel))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 42, Short.MAX_VALUE)
-                .addComponent(titleReservasi)
-                .addGap(129, 129, 129))
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(jPanel1Layout.createSequentialGroup()
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 42, Short.MAX_VALUE)
+                        .addComponent(titleReservasi)
+                        .addGap(129, 129, 129))
+                    .addGroup(jPanel1Layout.createSequentialGroup()
+                        .addGap(28, 28, 28)
+                        .addComponent(comboJumOrang, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))))
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(btDoResv)
+                .addGap(22, 22, 22))
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -70,10 +87,14 @@ public class GUIdoReservasi extends javax.swing.JFrame {
                 .addGap(31, 31, 31)
                 .addComponent(titleTanggal)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(titileJumOrang)
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(titileJumOrang)
+                    .addComponent(comboJumOrang, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(titleHotel)
-                .addContainerGap(127, Short.MAX_VALUE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 83, Short.MAX_VALUE)
+                .addComponent(btDoResv)
+                .addContainerGap())
         );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
@@ -134,6 +155,8 @@ public class GUIdoReservasi extends javax.swing.JFrame {
     
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton btDoResv;
+    private javax.swing.JComboBox<String> comboJumOrang;
     private org.jdatepicker.util.JDatePickerUtil jDatePickerUtil1;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JLabel titileJumOrang;

@@ -3,22 +3,20 @@
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
-            <file>file:/C:/Users/BINGLE/Documents/GitHub/TB_Hotel_PBO/src/tb_main_hotel/ListFasilitas.java</file>
+            <file>file:/C:/Users/BINGLE/Documents/GitHub/TB_Hotel_PBO/src/tb_main_hotel/ListLokasi.java</file>
             <file>file:/C:/Users/BINGLE/Documents/GitHub/TB_Hotel_PBO/src/tb_main_hotel/ListHotel.java</file>
             <file>file:/C:/Users/BINGLE/Documents/GitHub/TB_Hotel_PBO/src/tb_main_hotel/UI/GUIaddHotel.java</file>
             <file>file:/C:/Users/BINGLE/Documents/GitHub/TB_Hotel_PBO/src/tb_main_hotel/Admin.java</file>
             <file>file:/C:/Users/BINGLE/Documents/GitHub/TB_Hotel_PBO/src/tb_main_hotel/Kamar.java</file>
-            <file>file:/C:/Users/BINGLE/Documents/GitHub/TB_Hotel_PBO/src/tb_main_hotel/Fasilitas.java</file>
-            <file>file:/C:/Users/BINGLE/Documents/GitHub/TB_Hotel_PBO/src/tb_main_hotel/ListReview.java</file>
+            <file>file:/C:/Users/BINGLE/Documents/GitHub/TB_Hotel_PBO/src/tb_main_hotel/ListKamar.java</file>
+            <file>file:/C:/Users/BINGLE/Documents/GitHub/TB_Hotel_PBO/src/tb_main_hotel/UI/UI_Lokasi.java</file>
             <file>file:/C:/Users/BINGLE/Documents/GitHub/TB_Hotel_PBO/src/tb_main_hotel/UI/Admin_GUI.java</file>
             <file>file:/C:/Users/BINGLE/Documents/GitHub/TB_Hotel_PBO/src/tb_main_hotel/UI/GUIaddReview.java</file>
             <file>file:/C:/Users/BINGLE/Documents/GitHub/TB_Hotel_PBO/src/tb_main_hotel/UI/GUIListHotel.java</file>
-            <file>file:/C:/Users/BINGLE/Documents/GitHub/TB_Hotel_PBO/src/tb_main_hotel/UI/User_GUI.java</file>
-            <file>file:/C:/Users/BINGLE/Documents/GitHub/TB_Hotel_PBO/src/tb_main_hotel/ListReservasi.java</file>
-            <file>file:/C:/Users/BINGLE/Documents/GitHub/TB_Hotel_PBO/src/tb_main_hotel/Hotel.java</file>
+            <file>file:/C:/Users/BINGLE/Documents/GitHub/TB_Hotel_PBO/src/tb_main_hotel/UI/UI_Kamar.java</file>
             <file>file:/C:/Users/BINGLE/Documents/GitHub/TB_Hotel_PBO/src/tb_main_hotel/UI/GUIdoReservasi.java</file>
             <file>file:/C:/Users/BINGLE/Documents/GitHub/TB_Hotel_PBO/src/tb_main_hotel/TB_Main_Hotel.java</file>
-            <file>file:/C:/Users/BINGLE/Documents/GitHub/TB_Hotel_PBO/src/tb_main_hotel/Reservasi.java</file>
+            <file>file:/C:/Users/BINGLE/Documents/GitHub/TB_Hotel_PBO/src/tb_main_hotel/Lokasi.java</file>
             <file>file:/C:/Users/BINGLE/Documents/GitHub/TB_Hotel_PBO/src/tb_main_hotel/UI/Registrasi_GUI.java</file>
         </group>
     </open-files>

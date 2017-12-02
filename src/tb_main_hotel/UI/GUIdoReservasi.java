@@ -29,8 +29,6 @@ public class GUIdoReservasi extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        jDatePickerUtil1 = new org.jdatepicker.util.JDatePickerUtil();
-        utilDateModel1 = new org.jdatepicker.impl.UtilDateModel();
         jPanel1 = new javax.swing.JPanel();
         titleReservasi = new javax.swing.JLabel();
         titleTanggal = new javax.swing.JLabel();
@@ -157,12 +155,10 @@ public class GUIdoReservasi extends javax.swing.JFrame {
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton btDoResv;
     private javax.swing.JComboBox<String> comboJumOrang;
-    private org.jdatepicker.util.JDatePickerUtil jDatePickerUtil1;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JLabel titileJumOrang;
     private javax.swing.JLabel titleHotel;
     private javax.swing.JLabel titleReservasi;
     private javax.swing.JLabel titleTanggal;
-    private org.jdatepicker.impl.UtilDateModel utilDateModel1;
     // End of variables declaration//GEN-END:variables
 }

@@ -17,12 +17,18 @@ public class Hotel {
     private int idHotel = 0;
     private String nama;
     private String informasi;
+    private ListReview listReview;
+    private ListKamar listKamar;
+    private ListReservasi listReservasi;
     
-    Hotel(int id, String nama, String informasi){
+    public Hotel(int id, String nama, String informasi){
         
         this.idHotel = id;
         this.nama = nama;
         this.informasi = informasi;
+        this.listReview = new ListReview(new Database(), id);
+        this.listKamar = new ListKamar(new Database(), id);
+        this.listReservasi = new ListReservasi(new Database(), id);
     }
 
     /**
@@ -38,7 +44,6 @@ public class Hotel {
         return nama;
     }
     
-    
     /**
      * @return the informasi
      */
@@ -46,7 +51,23 @@ public class Hotel {
         return informasi;
     }
     
+    
+    public ListReview getReview() {
+    
+        this.listReview.refesh();
+        return this.listReview;
+    }
      
+    public ListKamar getKamar() {
+        this.listKamar.refesh();
+        return this.listKamar;
+    }
+    
+     public ListReservasi getReservasi() {
+        this.listReservasi.refesh();
+        return this.listReservasi;
+    }   
+    
     public void tampil() {
     
         System.out.println("Hotel #" + this.idHotel + ": " + this.nama);

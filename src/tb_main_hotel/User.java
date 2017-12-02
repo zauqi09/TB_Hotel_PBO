@@ -11,7 +11,7 @@ package tb_main_hotel;
  */
 public class User {
     private String nama;
-    private String akun;
+    public String akun;
     private String password;
 
     public User(String nama, String akun, String password) {
@@ -20,13 +20,6 @@ public class User {
         this.password = password;
     }
     
-    public void updateNama(String nama){
-        this.nama = nama;
-    }
-    
-    public void updatePassword(String password){
-        this.password = password;
-    }
 
     public String getNama() {
         return nama;
@@ -34,5 +27,10 @@ public class User {
 
     public String getAkun() {
         return akun;
+    }
+    
+      public void tampil() {
+    
+        System.out.println("Nama: " + this.nama + " Akun : " + this.akun);
     }
 }

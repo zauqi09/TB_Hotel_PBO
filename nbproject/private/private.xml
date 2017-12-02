@@ -1,7 +1,27 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project-private xmlns="http://www.netbeans.org/ns/project-private/1">
-    <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
+    <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="1">
+        <file>
+            <url>src/tb_main_hotel/Hotel.java</url>
+            <bookmark id="1">
+                <name/>
+                <line>56</line>
+                <key/>
+            </bookmark>
+        </file>
+    </editor-bookmarks>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
-        <group/>
+        <group>
+            <file>file:/C:/Users/Andaresta%20Fauzan/Documents/GitHub/TB_Hotel_PBO/src/tb_main_hotel/TableReservasi.java</file>
+            <file>file:/C:/Users/Andaresta%20Fauzan/Documents/GitHub/TB_Hotel_PBO/src/tb_main_hotel/UI/DialogaddKamar.java</file>
+            <file>file:/C:/Users/Andaresta%20Fauzan/Documents/GitHub/TB_Hotel_PBO/src/tb_main_hotel/UI/DialogaddReservasi.java</file>
+            <file>file:/C:/Users/Andaresta%20Fauzan/Documents/GitHub/TB_Hotel_PBO/src/tb_main_hotel/ListKamar.java</file>
+            <file>file:/C:/Users/Andaresta%20Fauzan/Documents/GitHub/TB_Hotel_PBO/src/tb_main_hotel/Database.java</file>
+            <file>file:/C:/Users/Andaresta%20Fauzan/Documents/GitHub/TB_Hotel_PBO/src/tb_main_hotel/UI/GUIListHotel.java</file>
+            <file>file:/C:/Users/Andaresta%20Fauzan/Documents/GitHub/TB_Hotel_PBO/src/tb_main_hotel/ListReservasi.java</file>
+            <file>file:/C:/Users/Andaresta%20Fauzan/Documents/GitHub/TB_Hotel_PBO/src/tb_main_hotel/Hotel.java</file>
+            <file>file:/C:/Users/Andaresta%20Fauzan/Documents/GitHub/TB_Hotel_PBO/src/tb_main_hotel/TB_Main_Hotel.java</file>
+            <file>file:/C:/Users/Andaresta%20Fauzan/Documents/GitHub/TB_Hotel_PBO/src/tb_main_hotel/Reservasi.java</file>
+        </group>
     </open-files>
 </project-private>

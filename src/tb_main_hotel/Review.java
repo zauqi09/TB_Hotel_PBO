@@ -12,14 +12,16 @@ package tb_main_hotel;
 public class Review {
     private String ulasan;
     private int rating;
-    private Hotel hotel;
+    private int idHotel;
     private int idReview = 0;
     
     
-    Review(String ulasan, int rating, Hotel h){
+    public Review(int id, String ulasan, int rating, int idHotel){
+       
+        this.idReview = id;
         this.ulasan = ulasan;
         this.rating = rating;
-        this.hotel = h;
+        this.idHotel = idHotel;
     }
     
     
@@ -42,8 +44,8 @@ public class Review {
     /**
      * @return the hotel
      */
-    public Hotel getHotel() {
-        return hotel;
+    public int getIdHotel() {
+        return idHotel;
     }
 
     /**
@@ -62,6 +64,6 @@ public class Review {
  
     public void tampil() {
     
-        System.out.println("ID #" + this.idReview + " Rating : " + this.rating + "Hotel : "+ this.hotel.getNama() + "Ulasan :" + this.ulasan);
+  //      System.out.println("ID #" + this.idReview + " Rating : " + this.rating + "Hotel : "+ this.hotel.getNama() + "Ulasan :" + this.ulasan);
     }
 }

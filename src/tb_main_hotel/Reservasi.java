@@ -16,13 +16,15 @@ public class Reservasi {
     private int idReservasi = 0;
     private Date tgl;
     private int jumOrang;
-    private Hotel hotel ;
-
-    public Reservasi(Date tgl, int jumOrang, Hotel h) {
+    private int idHotel ;
+    private int noKamar;
+    
+    public Reservasi(int id, Date tgl, int jumOrang, int idHotel, int noKamar) {
+        this.idReservasi = id;
         this.tgl = tgl;
         this.jumOrang = jumOrang;
-        this.hotel = h;
-        
+        this.idHotel = idHotel;
+        this.noKamar = noKamar;
     }    
     
     /**
@@ -39,20 +41,12 @@ public class Reservasi {
         return jumOrang;
     }
 
-    /**
-     * @return the hotel
-     */
-    public Hotel getHotel() {
-        return hotel;
-    }
+  
 
     /**
      * @return the idReservasi
      */
-    public int getId() {
-        return idReservasi;
-    }
-    
+ 
     public void setId(int id) {
     
         this.idReservasi = id;
@@ -60,8 +54,31 @@ public class Reservasi {
     
     public void tampil() {
     
-        System.out.println("ID #" + this.idReservasi + ": " + this.tgl + " Jumlah orang : " + this.jumOrang + "Hotel : "+ this.hotel.getNama());
+        //System.out.println("ID #" + this.idReservasi + ": " + this.tgl + " Jumlah orang : " + this.jumOrang + "Hotel : "+ this.hotel.getNama());
     }
+
+    /**
+     * @return the idReservasi
+     */
+    public int getIdReservasi() {
+        return idReservasi;
+    }
+
+    /**
+     * @return the idHotel
+     */
+    public int getIdHotel() {
+        return idHotel;
+    }
+
+    /**
+     * @return the noKamar
+     */
+    public int getNoKamar() {
+        return noKamar;
+    }
+    
+    
 }
     
     

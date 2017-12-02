@@ -1,8 +1,11 @@
 package tb_main_hotel;
 
 
+import java.sql.ResultSet;
 import java.util.ArrayList;
 import tb_main_hotel.Hotel;
+import tb_main_hotel.Database;
+import javax.swing.JTable;
 
 /*
  * To change this license header, choose License Headers in Project Properties.
@@ -16,11 +19,30 @@ import tb_main_hotel.Hotel;
  */
 public class ListHotel {
 
+    private Database db;
     private ArrayList<Hotel> hotelArray;
     
-    public ListHotel() {
+    public ListHotel(Database db) {
     
+        this.db = db;
         this.hotelArray = new ArrayList();
+    }
+    
+    public int refesh() {
+    
+        try{
+            ResultSet rs = this.db.getData("select idHotel, nama, informasi from hotel");
+            
+            this.hotelArray.clear();
+            while(rs.next()){    
+                Hotel hotel = new Hotel(rs.getInt(1), rs.getString(2), rs.getString(3));
+                this.hotelArray.add(hotel);   
+            }
+            rs.close();
+        }catch(Exception e){
+            System.out.println("Error refresh" +e.getMessage());
+        }
+        return this.hotelArray.size();
     }
     
     public int cari(int id) {
@@ -71,38 +93,64 @@ public class ListHotel {
             return null;
         }
     }
+    
+    public int count() {
+    
+        return this.hotelArray.size();
+    }
 
-
-    public void tambah(int id, String nama, String informasi){
+    public int tambah(int id, String nama, String informasi){
         
-        Hotel hotel = new Hotel(id, nama, informasi);
+        int hasil = 0;
         
         if (this.cari(id) > -1) {
-            System.out.println("id salah.");
+            hasil = 1;
         } else {
-            this.hotelArray.add(hotel);
-        }            
+            /* simpan ke db */
+            if (this.db.query("insert into hotel (idHotel, nama, informasi) values (" + id + ", '" + nama + "', '" + informasi + "')")) {
+                /* add ke list */
+                Hotel hotel = new Hotel(id, nama, informasi);
+                this.hotelArray.add(hotel);              
+            } else {
+                hasil = 2;
+            }
+        }
+        return hasil;
     }
     
-    public void delete(int id) {
+    public boolean delete(int id) {
     
         int i = this.cari(id);
         if (i > -1) {
-            this.hotelArray.remove(i);
+            try {
+                if (this.db.query("delete from hotel where idHotel = " + id)) {
+                    this.hotelArray.remove(i);
+                    return true;
+                } else {
+                    return false;
+                }
+            } catch (Exception e) {
+                return false;
+            }
         } else {
             System.out.println("hotel tidak ada.");
+            return false;
         }
     }
 
-    public void delete(String nama) {
+    /*
+    public boolean delete(String nama) {
     
         int i = this.cari(nama);
         if (i > -1) {
             this.hotelArray.remove(i);
+            return true;
         } else {
             System.out.println("hotel tidak ada.");
+            return false;
         }
     }
+    */
 
     public void tampil() {
     
@@ -117,4 +165,20 @@ public class ListHotel {
             System.out.println("Tidak ada data hotel");
         }
     }
+    
+    public void tampil(JTable jtable) {
+        
+        TableHotel data = new TableHotel(this);
+        jtable.setModel(data);
+        /*
+        if (this.hotelArray.size() > 0) {
+            for (int j = 0; j < this.hotelArray.size(); j++) {
+                jtable.setValueAt(this.hotelArray.get(j).getId(), j, 0);
+                jtable.setValueAt(this.hotelArray.get(j).getNama(), j, 1);
+                jtable.setValueAt(this.hotelArray.get(j).getInformasi(), j, 2);
+            }
+        }
+        */
+    }
+    
 }

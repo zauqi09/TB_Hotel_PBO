@@ -5,8 +5,7 @@
  */
 package tb_main_hotel;
 
-import java.util.Calendar;
-import java.util.Date;
+import tb_main_hotel.UI.GUIListHotel;
 
 /**
  *
@@ -19,6 +18,7 @@ public class TB_Main_Hotel {
      */
     public static void main(String[] args) {
         
+        /*
         // TODO code application logic here
         ListHotel lhotel = new ListHotel();
         lhotel.tambah(1, "hotela", "bintang5");
@@ -40,6 +40,15 @@ public class TB_Main_Hotel {
         ListReview lreview = new ListReview();
         int rsid = lreview.doReview("bagus", 10, lhotel.get("hotelb"));
         lreview.tampil();
+        
+        ListUser luser  = new ListUser();
+        luser.tambah("user1", "user01", "123");
+        luser.tambah("user1", "user01", "123");
+        luser.tampil();
+*/
+        
+        GUIListHotel view = new GUIListHotel();
+        view.setVisible(true);
     }
     
 }

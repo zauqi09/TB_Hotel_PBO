@@ -73,15 +73,17 @@
                               <Component id="titleUlasan" alignment="0" min="-2" max="-2" attributes="0"/>
                           </Group>
                           <EmptySpace min="-2" pref="38" max="-2" attributes="0"/>
-                          <Group type="103" groupAlignment="0" max="-2" attributes="0">
-                              <Component id="txRating" min="-2" pref="65" max="-2" attributes="0"/>
-                              <Component id="jScrollPane1" alignment="0" pref="300" max="32767" attributes="0"/>
-                              <Component id="txNamaHotel" alignment="0" max="32767" attributes="0"/>
+                          <Group type="103" groupAlignment="0" attributes="0">
+                              <Group type="103" groupAlignment="0" max="-2" attributes="0">
+                                  <Component id="jScrollPane1" alignment="0" pref="300" max="32767" attributes="0"/>
+                                  <Component id="txNamaHotel" alignment="0" max="32767" attributes="0"/>
+                              </Group>
+                              <Component id="comboRating" min="-2" max="-2" attributes="0"/>
                           </Group>
-                          <EmptySpace pref="70" max="32767" attributes="0"/>
+                          <EmptySpace max="32767" attributes="0"/>
                       </Group>
                       <Group type="102" alignment="1" attributes="0">
-                          <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
+                          <EmptySpace min="0" pref="190" max="32767" attributes="0"/>
                           <Group type="103" groupAlignment="0" attributes="0">
                               <Group type="102" alignment="1" attributes="0">
                                   <Component id="btDoReview" min="-2" max="-2" attributes="0"/>
@@ -105,7 +107,7 @@
                   <EmptySpace type="separate" max="-2" attributes="0"/>
                   <Group type="103" groupAlignment="3" attributes="0">
                       <Component id="titleRating" alignment="3" min="-2" max="-2" attributes="0"/>
-                      <Component id="txRating" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="comboRating" alignment="3" min="-2" max="-2" attributes="0"/>
                   </Group>
                   <EmptySpace max="-2" attributes="0"/>
                   <Group type="103" groupAlignment="3" attributes="0">
@@ -140,8 +142,6 @@
             </Property>
             <Property name="text" type="java.lang.String" value="Rating"/>
           </Properties>
-        </Component>
-        <Component class="javax.swing.JTextField" name="txRating">
         </Component>
         <Component class="javax.swing.JLabel" name="titleNamaHotel">
           <Properties>
@@ -180,6 +180,27 @@
           <Properties>
             <Property name="text" type="java.lang.String" value="Submit"/>
           </Properties>
+        </Component>
+        <Component class="javax.swing.JComboBox" name="comboRating">
+          <Properties>
+            <Property name="model" type="javax.swing.ComboBoxModel" editor="org.netbeans.modules.form.editors2.ComboBoxModelEditor">
+              <StringArray count="10">
+                <StringItem index="0" value="1"/>
+                <StringItem index="1" value="2"/>
+                <StringItem index="2" value="3"/>
+                <StringItem index="3" value="4"/>
+                <StringItem index="4" value="5"/>
+                <StringItem index="5" value="6"/>
+                <StringItem index="6" value="7"/>
+                <StringItem index="7" value="8"/>
+                <StringItem index="8" value="9"/>
+                <StringItem index="9" value="10"/>
+              </StringArray>
+            </Property>
+          </Properties>
+          <AuxValues>
+            <AuxValue name="JavaCodeGenerator_TypeParameters" type="java.lang.String" value="&lt;String&gt;"/>
+          </AuxValues>
         </Component>
       </SubComponents>
     </Container>

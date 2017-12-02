@@ -1,0 +1,2 @@
+tb_main_hotel.Registrasi_GUI$1
+tb_main_hotel.Registrasi_GUI
